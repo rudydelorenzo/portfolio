@@ -98,8 +98,8 @@ const PROJECTS: ProjectType[] = [
     {
         name: "StatsTool",
         description:
-            "StatsTool is a nodeJS app that pulls team statistics from the interned and prepares them for use in our broadcast graphics.",
-        image: "/maxgage-pvw.png",
+            "StatsTool is a nodeJS app that pulls team statistics from the internet and prepares them for use in our broadcast graphics.",
+        image: "",
         languages: ["js"],
         technologies: ["scraping", "data parsing", "cli"],
         github: "https://github.com/rudydelorenzo/statstool",
@@ -109,7 +109,7 @@ const PROJECTS: ProjectType[] = [
         name: "GameTime",
         description:
             "GameTime is an electron app that generates the JSON files that drive our broadcast's graphics system.",
-        image: "/maxgage-pvw.png",
+        image: "/gametime.png",
         languages: ["js", "css", "html"],
         technologies: ["electron", "native", "json"],
         github: "https://github.com/rudydelorenzo/gametime",
@@ -119,7 +119,7 @@ const PROJECTS: ProjectType[] = [
         name: "martinBMW",
         description:
             "martinBMW is a fascinating Java app that will look for any specific BMW part in scrapyards around you. It cross references BMW's internal parts catalog with vehicle inventories to build a full picture of parts availability.",
-        image: "/maxgage-pvw.png",
+        image: "/mbmw.png",
         languages: ["java", "py"],
         technologies: ["scraping", "inventory", "aggregation"],
         github: "https://github.com/rudydelorenzo/martinBMW",
@@ -129,7 +129,7 @@ const PROJECTS: ProjectType[] = [
         name: "martinServer",
         description:
             "A Tomcat webapp companion to the martinBMW project. Provides a UI to search for parts",
-        image: "/maxgage-pvw.png",
+        image: "/mserver.png",
         languages: ["java", "js", "css", "html"],
         technologies: ["tomcat", "rest"],
         github: "https://github.com/rudydelorenzo/martinServer",
@@ -138,7 +138,7 @@ const PROJECTS: ProjectType[] = [
         name: "beelicious",
         description:
             "An implementation of the TikTok meme where you send your buddies the entirety of the Bee Movie script.",
-        image: "/maxgage-pvw.png",
+        image: "/bee.png",
         languages: ["py"],
         technologies: ["pynput", "memes"],
         github: "https://github.com/rudydelorenzo/beelicious",
@@ -147,7 +147,7 @@ const PROJECTS: ProjectType[] = [
         name: "HyperActive",
         description:
             "Utility for synchronized control of Blackmagic's HyperDeck playback devices. It will allow you to connect to many HyperDeck devices over the network, and can control all of them simultaneously.",
-        image: "/maxgage-pvw.png",
+        image: "/ha.png",
         languages: ["java"],
         technologies: ["javafx", "telnet", "async", "auth"],
         github: "https://github.com/rudydelorenzo/HyperActive",

@@ -17,6 +17,7 @@ const getButtonsFromProject = (p: ProjectType): ReactNode[] => {
                 component={"a"}
                 href={p.url}
                 target={"_blank"}
+                key={`visit-btn-${p.name}`}
             >
                 <Group>
                     Visit
@@ -36,6 +37,7 @@ const getButtonsFromProject = (p: ProjectType): ReactNode[] => {
                 component={"a"}
                 href={p.github}
                 target={"_blank"}
+                key={`gh-btn-${p.name}`}
             >
                 <Group>
                     Github
