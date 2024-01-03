@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { Title } from "@mantine/core";
+import { Stack, Title } from "@mantine/core";
 
 export default function Home() {
     return (
-        <main>
-            <Title>{"Rudy's Portfolio"}</Title>
-        </main>
+        <Stack>
+            <Title>{"Rudy's Portfolio Homepage"}</Title>
+        </Stack>
     );
 }
