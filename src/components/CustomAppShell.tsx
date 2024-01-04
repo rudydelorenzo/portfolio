@@ -6,12 +6,11 @@ import {
     AppShellMain,
     AppShellNavbar,
     Burger,
-    Center,
     Flex,
     Group,
+    Image,
     UnstyledButton,
 } from "@mantine/core";
-import { IconAugmentedReality } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Navbar.module.css";
 import { ReactNode } from "react";
@@ -36,7 +35,11 @@ const getButtons = (
         <UnstyledButton
             key={`${button.label}-navbar-button-${key}`}
             className={classes.control}
-            style={currentURL === button.href ? { color: "blue" } : undefined}
+            style={
+                currentURL === button.href
+                    ? { color: "var(--mantine-primary-color-filled)" }
+                    : undefined
+            }
             onClick={() => router.push(button.href)}
         >
             {button.label}
@@ -68,7 +71,12 @@ export const CustomAppShell = ({ children }: { children: ReactNode }) => {
                         size="sm"
                     />
                     <Group justify="space-between" style={{ flex: 1 }}>
-                        <IconAugmentedReality size={30} />
+                        <Image
+                            src={"/rudy.svg"}
+                            alt={"Rudy Logo"}
+                            h={30}
+                            ml={"0.5rem"}
+                        />
                         <Group ml="xl" gap={0} visibleFrom="sm">
                             {getButtons(BUTTONS, router, currentURL, "header")}
                         </Group>

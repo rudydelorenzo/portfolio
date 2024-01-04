@@ -16,30 +16,72 @@ import {
     IconBrandGithub,
     IconBrandInstagram,
     IconBrandLinkedin,
+    IconMail,
 } from "@tabler/icons-react";
+import Link from "next/link";
+import { MainPageButtons } from "@/components/MainPageButtons";
 
 export default function Home() {
     return (
         <Center h={"100%"}>
-            <Group gap={"5rem"}>
-                <Avatar
-                    size={"20rem"}
-                    radius="100%"
-                    component={Flex}
-                    style={{
-                        backgroundColor: "#C1E7E3",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                    }}
-                >
-                    <Image
-                        src="/avatars/646e4e5dfc37e2ab955ecd03b96ff4f1-sticker.png"
-                        alt={"Avatar"}
-                        h={"85%"}
-                        w={"85%"}
-                    />
-                </Avatar>
+            <Group gap={"5rem"} mb={"5rem"} justify={"center"}>
+                <Stack align={"center"} gap={"2rem"}>
+                    <Avatar
+                        size={"20rem"}
+                        radius="100%"
+                        component={Flex}
+                        style={{
+                            backgroundColor: "#C1E7E3",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                        }}
+                    >
+                        <Image
+                            src="/avatars/646e4e5dfc37e2ab955ecd03b96ff4f1-sticker.png"
+                            alt={"Avatar"}
+                            h={"85%"}
+                            w={"85%"}
+                        />
+                    </Avatar>
+                    <Group>
+                        <Button
+                            variant={"subtle"}
+                            component={Link}
+                            href={
+                                "https://www.linkedin.com/in/rodrigo-de-lorenzo/"
+                            }
+                            target={"_blank"}
+                        >
+                            <IconBrandLinkedin />
+                        </Button>
+                        <Button
+                            variant={"subtle"}
+                            component={Link}
+                            href={"https://github.com/rudydelorenzo"}
+                            target={"_blank"}
+                        >
+                            <IconBrandGithub />
+                        </Button>
+                        <Button
+                            variant={"subtle"}
+                            component={Link}
+                            href={"https://www.instagram.com/rudy.delorenzo/"}
+                            target={"_blank"}
+                        >
+                            <IconBrandInstagram />
+                        </Button>
+                        <Button
+                            variant={"subtle"}
+                            component={Link}
+                            href={"mailto:rdelorenzo5@gmail.com"}
+                            target={"_blank"}
+                        >
+                            <IconMail />
+                        </Button>
+                    </Group>
+                </Stack>
+
                 <Stack>
                     <Title>{"Hi! 👋"}</Title>
                     <Text
@@ -54,7 +96,7 @@ export default function Home() {
                     <Divider />
                     <Text size="md">
                         {
-                            "I'm a BSc student at U of A, full-time software engg, and part-time README writer 📝"
+                            "I'm a BSc student at U of A, full-time software engg, and part-time README writer 📝."
                         }
                     </Text>
                     <Text size="md">
@@ -71,24 +113,7 @@ export default function Home() {
                         <ListItem>🌱 Python, PHP, memes, and more!</ListItem>
                     </List>
 
-                    <Group my={"1rem"} justify={"space-between"}>
-                        <Group>
-                            <Button variant={"outline"}>View my work</Button>
-                            <Button>About me</Button>
-                        </Group>
-
-                        <Group>
-                            <Button variant={"subtle"}>
-                                <IconBrandLinkedin />
-                            </Button>
-                            <Button variant={"subtle"}>
-                                <IconBrandGithub />
-                            </Button>
-                            <Button variant={"subtle"}>
-                                <IconBrandInstagram />
-                            </Button>
-                        </Group>
-                    </Group>
+                    <MainPageButtons />
                 </Stack>
             </Group>
         </Center>

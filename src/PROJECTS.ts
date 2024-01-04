@@ -101,7 +101,7 @@ const PROJECTS: ProjectType[] = [
             "StatsTool is a nodeJS app that pulls team statistics from the internet and prepares them for use in our broadcast graphics.",
         image: "",
         languages: ["js"],
-        technologies: ["scraping", "data parsing", "cli"],
+        technologies: ["scraping", "data parsing", "cli", "native"],
         github: "https://github.com/rudydelorenzo/statstool",
         url: "https://github.com/rudydelorenzo/statstool/releases/tag/1.0.1",
     },
