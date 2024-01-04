@@ -7,6 +7,7 @@ import {
     AppShellNavbar,
     Burger,
     Center,
+    Flex,
     Group,
     UnstyledButton,
 } from "@mantine/core";
@@ -77,7 +78,7 @@ export const CustomAppShell = ({ children }: { children: ReactNode }) => {
             <AppShellNavbar py="md" px={4}>
                 {getButtons(BUTTONS, router, currentURL, "sidebar")}
             </AppShellNavbar>
-            <AppShellMain>
+            <AppShellMain component={Flex}>
                 <ScrollableContainer>{children}</ScrollableContainer>
             </AppShellMain>
         </AppShell>

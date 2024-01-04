@@ -1,17 +1,19 @@
 import { ReactNode } from "react";
+import { Flex } from "@mantine/core";
 
 export const ScrollableContainer = ({ children }: { children: ReactNode }) => {
     return (
-        <div
+        <Flex
             style={{
-                width: "100%",
-                maxHeight: "100%",
-                minHeight: "100%",
                 overflowY: "scroll",
-                padding: "2rem",
             }}
+            p={"2rem"}
+            mih={"100%"}
+            mah={"100%"}
+            w={"100%"}
+            direction={"column"}
         >
             {children}
-        </div>
+        </Flex>
     );
 };
