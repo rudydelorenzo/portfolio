@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker-deploy": "docker compose up --build --detach"
   },
   "dependencies": {
     "@mantine/carousel": "^7.3.2",
