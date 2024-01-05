@@ -27,7 +27,7 @@ const PROJECTS: ProjectType[] = [
         languages: ["ts"],
         technologies: ["react", "chart.js", "docker"],
         github: "https://github.com/rudydelorenzo/maxgage",
-        url: "http://maxgage.rudydelorenzo.ca/",
+        url: "https://maxgage.rudydelorenzo.ca/",
     },
     {
         name: "WS2811B Controller PCB",
@@ -35,7 +35,7 @@ const PROJECTS: ProjectType[] = [
             "A PCB design for a WS2811B LED controller. Uses an ESP32/8266 microprocessor for computation",
         image: "/pcb.png",
         languages: ["other"],
-        technologies: ["pcb design", "electronics"],
+        technologies: ["pcb design", "electronics", "esp32"],
         github: "https://github.com/rudydelorenzo/WS2811B_PCB",
     },
     {
@@ -71,20 +71,21 @@ const PROJECTS: ProjectType[] = [
         name: "FTDI Driver Patch",
         description:
             "A web service that performs on-the-fly patching to the official FTDI driver package to allow installation on new versions of Windows",
-        image: "",
+        image: "/ftdi.png",
         languages: ["js", "c", "html", "css"],
-        technologies: ["drivers", "patching", "expressjs"],
+        technologies: ["drivers", "patching", "expressjs", "ci"],
         github: "https://github.com/rudydelorenzo/ftdi-driver-server",
         url: "https://drivers.rudydelorenzo.ca/",
     },
     {
         name: "Stage3",
         description:
-            'Stage3 was a webapp that interpreted the COVID vaccination numbers in alberta and made predictions on when the province would hit key milestones. \nStage3 correctly predicted Alberta\'s "back to business" opening date!',
-        image: "",
+            'Stage3 was a webapp that interpreted the COVID vaccination numbers in alberta and made predictions on when the province would hit key milestones. \nStage3 correctly predicted Alberta\'s "Open for Summer" opening date!',
+        image: "/stage3.png",
         languages: ["js", "css", "html"],
         technologies: ["rest", "statistics", "expressjs"],
         github: "https://github.com/rudydelorenzo/stage3",
+        url: "https://stage3.rudydelorenzo.ca",
     },
     {
         name: "Tree",
@@ -99,7 +100,7 @@ const PROJECTS: ProjectType[] = [
         name: "StatsTool",
         description:
             "StatsTool is a nodeJS app that pulls team statistics from the internet and prepares them for use in our broadcast graphics.",
-        image: "",
+        image: "/statstool.png",
         languages: ["js"],
         technologies: ["scraping", "data parsing", "cli", "native"],
         github: "https://github.com/rudydelorenzo/statstool",
@@ -128,7 +129,7 @@ const PROJECTS: ProjectType[] = [
     {
         name: "martinServer",
         description:
-            "A Tomcat webapp companion to the martinBMW project. Provides a UI to search for parts",
+            "A Tomcat webapp companion to the martinBMW project. Provides a friendly UI to search for parts, etc.",
         image: "/mserver.png",
         languages: ["java", "js", "css", "html"],
         technologies: ["tomcat", "rest"],

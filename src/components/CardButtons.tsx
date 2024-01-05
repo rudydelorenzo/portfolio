@@ -2,8 +2,8 @@
 
 import { ProjectType } from "@/types";
 import { ReactNode } from "react";
-import { ActionIcon, Button, Group } from "@mantine/core";
-import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
+import { Button, Group } from "@mantine/core";
+import { IconBrandGithub } from "@tabler/icons-react";
 
 const getButtonsFromProject = (p: ProjectType): ReactNode[] => {
     const buttons: ReactNode[] = [];
@@ -38,11 +38,9 @@ const getButtonsFromProject = (p: ProjectType): ReactNode[] => {
                 href={p.github}
                 target={"_blank"}
                 key={`gh-btn-${p.name}`}
+                rightSection={<IconBrandGithub />}
             >
-                <Group>
-                    Github
-                    <IconBrandGithub />
-                </Group>
+                Github
             </Button>,
         );
     }
@@ -56,7 +54,8 @@ export const CardButtons = ({
     project: ProjectType;
 }): ReactNode => {
     return (
-        <Group grow={true}>
+        // preventGrowOverflow solves the issue of GitHub button cropping on mobile
+        <Group grow={true} /* preventGrowOverflow={false} */>
             {getButtonsFromProject(project).map((e) => e)}
         </Group>
     );

@@ -2,6 +2,7 @@ import { Center, SimpleGrid, Stack, Title } from "@mantine/core";
 import PROJECTS from "@/PROJECTS";
 import { ReactNode } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
+import type { Metadata } from "next";
 
 const ProjectsPage = () => {
     return (
@@ -22,6 +23,11 @@ const ProjectsPage = () => {
             </Stack>
         </Center>
     );
+};
+
+export const metadata: Metadata = {
+    title: "Portfolio - Rudy de Lorenzo",
+    description: "Rudy de Lorenzo's Portfolio",
 };
 
 export default ProjectsPage;
