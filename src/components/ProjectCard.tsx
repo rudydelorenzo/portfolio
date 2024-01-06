@@ -35,18 +35,14 @@ export const ProjectCard = ({
             radius="md"
             withBorder
         >
-            <CardSection
-                style={{
-                    "--_card-section-mt": "calc(var(--card-padding)*-1)",
-                }}
-            >
+            <Card.Section>
                 <Image
                     src={`${project.image}`}
                     fallbackSrc={`https://placehold.co/600x400?text=${project.name}`}
                     height={160}
                     alt={`${project.name} image`}
                 />
-            </CardSection>
+            </Card.Section>
 
             <Group justify="space-between" mt="md" mb="xs">
                 <Text fw={500}>{project.name}</Text>
