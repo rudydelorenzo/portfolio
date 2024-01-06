@@ -16,3 +16,7 @@ export type NavigationButton = {
     href: string;
     label: string;
 };
+
+export type GithubInfoRequestBody = { owner: string; repo: string };
+
+export type GithubInfoResponseBody = { stars: number; forks: number };

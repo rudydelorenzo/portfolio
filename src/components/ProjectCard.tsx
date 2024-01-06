@@ -8,6 +8,7 @@ import {
     Collapse,
     Group,
     Image,
+    Stack,
     Text,
 } from "@mantine/core";
 import { LANGUAGE_COLORS } from "@/constants";
@@ -16,8 +17,8 @@ import { CardPills } from "@/components/CardPills";
 import { CardButtons } from "@/components/CardButtons";
 import { ReactNode } from "react";
 import { useDisclosure } from "@mantine/hooks";
-import { CollapsableTagList } from "@/components/CollapsableTagList";
 import { LanguagesPillList } from "@/components/LanguagesPillList";
+import { StarsAndForks } from "@/components/StarsAndForks";
 
 export const ProjectCard = ({
     project,
@@ -41,9 +42,6 @@ export const ProjectCard = ({
             >
                 <Image
                     src={`${project.image}`}
-                    // src={
-                    //     "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
-                    // }
                     fallbackSrc={`https://placehold.co/600x400?text=${project.name}`}
                     height={160}
                     alt={`${project.name} image`}
@@ -77,6 +75,8 @@ export const ProjectCard = ({
                     />
                 </Collapse>
             )}
+
+            <StarsAndForks githubURL={project.github} mb={"sm"} />
 
             <Text size="sm" c="dimmed" style={{ flexGrow: 1 }}>
                 {project.description}

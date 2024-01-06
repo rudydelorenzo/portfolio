@@ -12,7 +12,7 @@ export const LanguagesPillList = ({
     fwdKey: string;
 }): ReactNode => {
     return (
-        <ScrollArea scrollbars={"x"} my={"sm"} type={"never"}>
+        <ScrollArea scrollbars={"x"} mt={"0"} mb={"md"} type={"never"}>
             <Group gap={"sm"} wrap={"nowrap"}>
                 {languages.map((lang) => (
                     <Badge
