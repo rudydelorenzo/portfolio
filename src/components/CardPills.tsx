@@ -1,6 +1,6 @@
 import { ProjectType } from "@/types";
 import { ReactNode } from "react";
-import { Badge, Group, Pill, ScrollArea } from "@mantine/core";
+import { Badge, Group, ScrollArea } from "@mantine/core";
 
 export const CardPills = ({ project }: { project: ProjectType }): ReactNode => {
     return (

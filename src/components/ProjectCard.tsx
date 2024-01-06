@@ -1,16 +1,7 @@
 "use client";
 
 import { ProjectType } from "@/types";
-import {
-    Badge,
-    Card,
-    CardSection,
-    Collapse,
-    Group,
-    Image,
-    Stack,
-    Text,
-} from "@mantine/core";
+import { Badge, Card, Collapse, Group, Image, Text } from "@mantine/core";
 import { LANGUAGE_COLORS } from "@/constants";
 import { languageShorthandToFull } from "@/helpers";
 import { CardPills } from "@/components/CardPills";
