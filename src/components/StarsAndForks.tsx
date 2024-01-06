@@ -18,8 +18,6 @@ export const StarsAndForks = ({
 
     useEffect(() => {
         (async () => {
-            // fetch
-
             if (!githubURL) return;
 
             const regex = /\/([^\/]+)\/([^\/]+)$/;
@@ -37,9 +35,6 @@ export const StarsAndForks = ({
             });
 
             const { stars, forks }: GithubInfoResponseBody = await res.json();
-
-            console.log(repo, owner);
-            console.log(stars, forks);
 
             setStars(stars);
             setForks(forks);
