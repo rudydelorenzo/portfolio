@@ -18,7 +18,5 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Start docker compose
         run: npm run docker-deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Check if online (15 tries with backoff)
         run: wget --retry-connrefused --tries=15 --spider localhost:3004
