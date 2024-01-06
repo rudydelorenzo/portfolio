@@ -14,7 +14,7 @@ jobs:
       - name: Env Test
         run: echo ${{ secrets.GH_TOKEN }}
       - name: Save secrets
-        run: cat ${{ secrets.GH_TOKEN }} > .env
+        run: touch .env && cat ${{ secrets.GH_TOKEN }} > .env
       - name: Start docker compose
         run: npm run docker-deploy
         env:
