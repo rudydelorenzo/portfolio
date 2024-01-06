@@ -54,7 +54,7 @@ export const StarsAndForks = ({
                     position={"bottom"}
                     withArrow
                 >
-                    <Group gap={5}>
+                    <Group gap={5} style={{ cursor: "default" }}>
                         <IconStar size={16} />
                         <Text c={"dimmed"} size={"sm"}>
                             {stars}
@@ -71,7 +71,7 @@ export const StarsAndForks = ({
                     position={"bottom"}
                     withArrow
                 >
-                    <Group gap={5}>
+                    <Group gap={5} style={{ cursor: "default" }}>
                         <IconGitFork size={16} />
                         <Text c={"dimmed"} size={"sm"}>
                             {forks}
