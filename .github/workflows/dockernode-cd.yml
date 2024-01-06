@@ -13,8 +13,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: Env Test
         run: echo ${{ secrets.GH_TOKEN }}
+      - name: ls
+        run: ls -la
       - name: Save secrets
-        run: touch .env && cat ${{ secrets.GH_TOKEN }} > .env
+        run: touch .env
+      - name: ls
+        run: ls -la
+      - name: Save secrets
+        run: cat ${{ secrets.GH_TOKEN }} > .env
       - name: Start docker compose
         run: npm run docker-deploy
         env:
