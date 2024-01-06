@@ -22,7 +22,7 @@ jobs:
       - run: 'echo "$GH_TOKEN" > .env'
         shell: bash
         env:
-          SSH_KEY: ${{secrets.GH_TOKEN}}
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
       - name: Start docker compose
         run: npm run docker-deploy
         env:
