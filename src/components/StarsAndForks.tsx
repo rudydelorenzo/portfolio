@@ -1,4 +1,4 @@
-import { Group, Text } from "@mantine/core";
+import { Group, Text, Tooltip } from "@mantine/core";
 import { IconGitFork, IconStar } from "@tabler/icons-react";
 import {
     GithubInfoRequestBody,
@@ -46,20 +46,38 @@ export const StarsAndForks = ({
     return (
         <Group {...rest}>
             {stars > 0 && (
-                <Group gap={5}>
-                    <IconStar size={16} />
-                    <Text c={"dimmed"} size={"sm"}>
-                        {stars}
-                    </Text>
-                </Group>
+                <Tooltip
+                    label={`${stars} ${
+                        stars === 1 ? "star" : "stars"
+                    } on GitHub`}
+                    transitionProps={{ transition: "pop", duration: 300 }}
+                    position={"bottom"}
+                    withArrow
+                >
+                    <Group gap={5}>
+                        <IconStar size={16} />
+                        <Text c={"dimmed"} size={"sm"}>
+                            {stars}
+                        </Text>
+                    </Group>
+                </Tooltip>
             )}
             {forks > 0 && (
-                <Group gap={5}>
-                    <IconGitFork size={16} />
-                    <Text c={"dimmed"} size={"sm"}>
-                        {forks}
-                    </Text>
-                </Group>
+                <Tooltip
+                    label={`${forks} ${
+                        stars === 1 ? "fork" : "forks"
+                    } on GitHub`}
+                    transitionProps={{ transition: "pop", duration: 300 }}
+                    position={"bottom"}
+                    withArrow
+                >
+                    <Group gap={5}>
+                        <IconGitFork size={16} />
+                        <Text c={"dimmed"} size={"sm"}>
+                            {forks}
+                        </Text>
+                    </Group>
+                </Tooltip>
             )}
         </Group>
     );
