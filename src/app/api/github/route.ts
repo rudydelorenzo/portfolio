@@ -4,17 +4,20 @@ import { GithubInfoRequestBody, GithubInfoResponseBody } from "@/types";
 export async function POST(request: NextRequest) {
     const { owner, repo }: GithubInfoRequestBody = await request.json();
 
-    console.log("github token: ", process.env.GH_TOKEN);
+    const token = process.env.GH_TOKEN;
 
     const starsReq = fetch(
         `https://api.github.com/repos/${owner}/${repo}/stargazers`,
         {
-            headers: { Authorization: `Bearer ${process.env.GH_TOKEN}` },
+            headers: { Authorization: `Bearer ${token}` },
         },
     );
 
     const forksReq = fetch(
         `https://api.github.com/repos/${owner}/${repo}/forks`,
+        {
+            headers: { Authorization: `Bearer ${token}` },
+        },
     );
 
     const [starsRes, forksRes] = await Promise.all([starsReq, forksReq]);
@@ -27,8 +30,6 @@ export async function POST(request: NextRequest) {
         stars: starsJSON.length || 0,
         forks: forksJSON.length || 0,
     };
-
-    console.log(starsJSON);
 
     return Response.json(responseBody);
 }
