@@ -19,7 +19,7 @@ jobs:
         run: touch .env
       - name: ls
         run: ls -la
-      - run: 'echo "$GH_TOKEN" > .env'
+      - run: 'echo GH_TOKEN="$GH_TOKEN" > .env'
         shell: bash
         env:
           GH_TOKEN: ${{secrets.GH_TOKEN}}

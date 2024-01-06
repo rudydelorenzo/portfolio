@@ -1,5 +1,5 @@
 import { Group, Text } from "@mantine/core";
-import { IconStar } from "@tabler/icons-react";
+import { IconGitFork, IconStar } from "@tabler/icons-react";
 import {
     GithubInfoRequestBody,
     GithubInfoResponseBody,
@@ -54,15 +54,15 @@ export const StarsAndForks = ({
                 <Group gap={5}>
                     <IconStar size={16} />
                     <Text c={"dimmed"} size={"sm"}>
-                        16
+                        {stars}
                     </Text>
                 </Group>
             )}
             {forks > 0 && (
                 <Group gap={5}>
-                    <IconStar size={16} />
+                    <IconGitFork size={16} />
                     <Text c={"dimmed"} size={"sm"}>
-                        16
+                        {forks}
                     </Text>
                 </Group>
             )}
