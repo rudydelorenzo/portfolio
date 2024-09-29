@@ -10,7 +10,7 @@ export type ContentsOfPathType = string | FilesystemStructureType;
 const getAsciiFromImage = async (
     img: ProjectType["image"],
 ): Promise<string> => {
-    return "hello image here";
+    return "[ASCIIFIED IMAGE GOES HERE]";
 };
 
 const getProjectsFileStructure = (
@@ -22,7 +22,8 @@ const getProjectsFileStructure = (
         const imgAscii = getAsciiFromImage(proj.image).then((data) => data);
 
         text += imgAscii + "\n";
-        text += proj.name;
+        text += `# ${proj.name}\n\n`;
+        text += `## Using: ${proj.languages.join(", ")}`;
 
         return text;
     };

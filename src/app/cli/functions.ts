@@ -23,7 +23,7 @@ export const ls: CommandHandler = (args: string[] = ["."]) => {
 
     const dir = getAtPath(structure, fullPath);
 
-    if (!isDir(dir)) return `not a directory: ${fullPath[fullPath.length - 1]}`;
+    if (!isDir(dir)) throw `not a directory: ${fullPath[fullPath.length - 1]}`;
 
     return `${Object.keys(dir).join("\t\t")}`;
 };

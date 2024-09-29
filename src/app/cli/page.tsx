@@ -46,13 +46,18 @@ const CLIPage = () => {
                     value={tty}
                     readOnly={true}
                     rows={20}
-                    ff={"monospace"}
+                    styles={{
+                        input: { fontFamily: "monospace" },
+                    }}
                 />
                 <Input
                     type={"text"}
                     value={input}
                     onChange={handleInputOnChange}
                     onKeyDown={keyDownListener}
+                    styles={{
+                        input: { fontFamily: "monospace" },
+                    }}
                 />
             </Stack>
         </Center>
