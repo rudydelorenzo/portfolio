@@ -2,9 +2,21 @@ import { ProjectType } from "@/types";
 
 const PROJECTS: ProjectType[] = [
     {
+        name: "Pantonify",
+        description:
+            "A fun webapp that adds a mat with text to a photo, " +
+            "in a style similar to that of Pantone color swatches",
+        image: "",
+        languages: ["ts"],
+        technologies: ["nextjs", "svg", "react", "wysiwyg"],
+        github: "https://github.com/rudydelorenzo/pantonify",
+        url: "https://pantonify.rudydelorenzo.ca",
+    },
+    {
         name: "TuneSplit",
         description:
-            "A webapp that splits audio files into separate vocal and instrumental tracks using a hybrid neural + transformer model.",
+            "A webapp that splits audio files into separate vocal and instrumental tracks using a hybrid neural " +
+            "+ transformer model. Published on Docker Hub.",
         image: "/tunesplit-fill.png",
         languages: ["ts", "py"],
         technologies: ["nodeJS", "ML", "docker", "WebSockets"],
