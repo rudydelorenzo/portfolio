@@ -4,11 +4,11 @@ const PROJECTS: ProjectType[] = [
     {
         name: "Pantonify",
         description:
-            "A fun webapp that adds a mat with text to a photo, " +
-            "in a style similar to that of Pantone color swatches",
-        image: "",
+            "An fully fledged image editor that adds a mat with text to " +
+            "a photo, in a style similar to that of Pantone color swatches",
+        image: "/pantonify.png",
         languages: ["ts"],
-        technologies: ["nextjs", "svg", "react", "wysiwyg"],
+        technologies: ["nextjs", "svg", "react", "visual editor"],
         github: "https://github.com/rudydelorenzo/pantonify",
         url: "https://pantonify.rudydelorenzo.ca",
     },
