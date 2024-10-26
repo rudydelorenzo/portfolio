@@ -4,8 +4,8 @@ const PROJECTS: ProjectType[] = [
     {
         name: "Pantonify",
         description:
-            "An fully fledged image editor that adds a mat with text to " +
-            "a photo, in a style similar to that of Pantone color swatches",
+            "A fully fledged image editor that puts your art into a " +
+            "Pantone color chip frame. Built with SVG and nextJS.",
         image: "/pantonify.png",
         languages: ["ts"],
         technologies: ["nextjs", "svg", "react", "visual editor"],
