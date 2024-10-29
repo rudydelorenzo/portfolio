@@ -90,6 +90,7 @@ export default function Home() {
                         fw={900}
                         variant="gradient"
                         gradient={{ from: "blue", to: "cyan", deg: 90 }}
+                        w={"fit-content"}
                     >
                         {"I'm Rudy"}
                     </Text>
