@@ -111,7 +111,7 @@ export default function Home() {
                         <ListItem>☕ Java + JavaFX</ListItem>
                         <ListItem>🤖 Arduino (C++)</ListItem>
                         <ListItem>🎯 PCB Designs</ListItem>
-                        <ListItem>🌱 Python, PHP, memes, and more!</ListItem>
+                        <ListItem>🌱 Python, CI, memes, and more!</ListItem>
                     </List>
 
                     <MainPageButtons />
