@@ -13,6 +13,7 @@ import {
     Button,
 } from "@mantine/core";
 import {
+    IconBrandDocker,
     IconBrandGithub,
     IconBrandInstagram,
     IconBrandLinkedin,
@@ -66,10 +67,10 @@ export default function Home() {
                         <Button
                             variant={"subtle"}
                             component={Link}
-                            href={"https://www.instagram.com/rudy.delorenzo/"}
+                            href={"https://hub.docker.com/u/rdelorenzo"}
                             target={"_blank"}
                         >
-                            <IconBrandInstagram />
+                            <IconBrandDocker />
                         </Button>
                         <Button
                             variant={"subtle"}
