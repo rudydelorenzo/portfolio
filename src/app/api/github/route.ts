@@ -9,6 +9,7 @@ export async function POST(request: NextRequest) {
     const starsReq = fetch(
         `https://api.github.com/repos/${owner}/${repo}/stargazers`,
         {
+            next: { revalidate: 3600 },
             headers: { Authorization: `Bearer ${token}` },
         },
     );
@@ -16,6 +17,7 @@ export async function POST(request: NextRequest) {
     const forksReq = fetch(
         `https://api.github.com/repos/${owner}/${repo}/forks`,
         {
+            next: { revalidate: 3600 },
             headers: { Authorization: `Bearer ${token}` },
         },
     );

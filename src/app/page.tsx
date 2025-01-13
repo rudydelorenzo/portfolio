@@ -83,7 +83,7 @@ export default function Home() {
                     </Group>
                 </Stack>
 
-                <Stack>
+                <Stack maw={"45vw"}>
                     <Title>{"Hi! 👋"}</Title>
                     <Text
                         size="4rem"
@@ -97,9 +97,9 @@ export default function Home() {
                     </Text>
                     <Divider />
                     <Text size="md">
-                        {
-                            "I'm a BSc student at U of A, full-time software engg, and part-time README writer 📝."
-                        }
+                        {"I'm a Software Engineer with a BSc from the " +
+                            "University of Alberta and over 5 years of experience developing " +
+                            "large web applications at scale in the private sector."}
                     </Text>
                     <Text size="md">
                         {
