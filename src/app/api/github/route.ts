@@ -6,10 +6,6 @@ export async function POST(request: NextRequest) {
 
     const token = process.env.GH_TOKEN;
 
-    console.log("TOKEN", token);
-    console.log("CHECK1");
-    console.log("TOKEN", token);
-
     const starsReq = fetch(
         `https://api.github.com/repos/${owner}/${repo}/stargazers?per_page=100`,
         {
@@ -26,21 +22,11 @@ export async function POST(request: NextRequest) {
         },
     );
 
-    console.log("CHECK2");
-
     const [starsRes, forksRes] = await Promise.all([starsReq, forksReq]);
-
-    console.log("CHECK3");
 
     const starsJSON: any[] = await starsRes.json();
 
     const forksJSON: any[] = await forksRes.json();
-
-    console.log("CHECK4");
-
-    console.log(forksJSON, starsJSON);
-
-    console.log("CHECK5");
 
     const responseBody: GithubInfoResponseBody = {
         stars: starsJSON.length || 0,
