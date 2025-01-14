@@ -38,4 +38,4 @@ export async function POST(request: NextRequest) {
     return Response.json(responseBody);
 }
 
-export const revalidate = 0;
+export const revalidate = 3600;
