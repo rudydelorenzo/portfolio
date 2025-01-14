@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
     const token = process.env.GH_TOKEN;
 
     const starsReq = fetch(
-        `https://api.github.com/repos/${owner}/${repo}/stargazers`,
+        `https://api.github.com/repos/${owner}/${repo}/stargazers?per_page=100`,
         {
             next: { revalidate: 3600 },
             headers: { Authorization: `Bearer ${token}` },
@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     );
 
     const forksReq = fetch(
-        `https://api.github.com/repos/${owner}/${repo}/forks`,
+        `https://api.github.com/repos/${owner}/${repo}/forks?per_page=100`,
         {
             next: { revalidate: 3600 },
             headers: { Authorization: `Bearer ${token}` },
@@ -27,6 +27,8 @@ export async function POST(request: NextRequest) {
     const starsJSON: any[] = await starsRes.json();
 
     const forksJSON: any[] = await forksRes.json();
+
+    console.log(forksJSON, starsJSON);
 
     const responseBody: GithubInfoResponseBody = {
         stars: starsJSON.length || 0,

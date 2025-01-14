@@ -11,8 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Add environment variables to .env
-        run: 'touch .env && echo GH_TOKEN="$GH_TOKEN" > .env'
+      - name: Add environment variables to .env.local
+        run: 'touch .env.local && echo GH_TOKEN="$GH_TOKEN" > .env.local'
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
