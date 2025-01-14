@@ -29,6 +29,7 @@ export async function POST(request: NextRequest) {
     const forksJSON: any[] = await forksRes.json();
 
     console.log(forksJSON, starsJSON);
+    console.log("TOKEN", token);
 
     const responseBody: GithubInfoResponseBody = {
         stars: starsJSON.length || 0,
